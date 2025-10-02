@@ -1,0 +1,17 @@
+public class practise{
+  public static void main(String[] args)
+  {
+    int num1;
+    int num2;
+    int num3;
+    int average;
+
+    num1 = 125;
+    num2 = 28;
+    num3 = -25;
+
+    average = (num1+num2+num3)/3;
+
+    System.out.print("Value of num1: "+num1+"\nValue of num2: "+num2+"\nValue of num3: "+num3+"\n Value of avergae: "+average);
+  }
+}

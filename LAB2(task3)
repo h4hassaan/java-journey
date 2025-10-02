@@ -1,0 +1,57 @@
+//a)
+import java.util.Scanner;
+
+public class LabTask3{
+  public static void main(String[]args){
+    //b)
+    Scanner console = new Scanner(System.in);
+    //c)
+    System.out.println("         C             )");
+    int SECRET = 11;
+    double RATE = 12.50;
+    //d)
+    System.out.println("         D             )");
+    int num1;
+    int num2;
+    int newNum;
+    String name;
+    double hoursWorked;
+    double wages;
+
+    //e)
+    System.out.println("         E             )");
+    System.out.println("Enter two numbers: ");
+    num1 = console.nextInt();
+    num2 = console.nextInt();
+    //f)
+    System.out.println("         F             )");
+    System.out.println("The value of num1: "+num1);
+    System.out.println("The value of num2: "+num2);
+    //g)
+    System.out.println("         G             )");
+    newNum = (num1*2)+num2;
+    System.out.println("The value of newNum: "+newNum);
+    //h)
+    System.out.println("         H             )");
+    newNum = newNum+SECRET;
+    System.out.println("The updated value of newNum: "+newNum);
+    //i)
+    System.out.println("         I             )");
+    System.out.println("Enter your last name: ");
+    name = console.next();
+    //j)
+    System.out.println("         j             )");
+    System.out.println("Enter any decimal number between 0-70");
+    hoursWorked = console.nextFloat();
+    //k)
+    System.out.println("         K             )");
+    wages = RATE*hoursWorked;
+    
+    //l)
+    System.out.println("         L             )");
+    System.out.println("Name: "+name);
+    System.out.println("Pay Rate: $"+RATE);
+    System.out.println("Hours Worked: "+hoursWorked);
+    System.out.println("Salary: $"+wages);
+  }
+}

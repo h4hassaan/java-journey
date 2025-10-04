@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Activity2 {
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double amount;
+        
+        System.out.print("Enter the amount as decimal number: ");
+        amount = input.nextDouble();//11.56
+
+        double totalcents = (amount*100);//1156
+
+        int dollars = (int)(totalcents/100); //11
+        int remaining = (int)(totalcents%100); // 56
+
+        int quarters = (int)(remaining/25); //2
+        remaining = (int)(remaining%25); //6
+
+        int dimes = (int)(remaining/10); //0
+        remaining = (int)(remaining%10); //6
+
+        int nickels = (int)(remaining/5); //1
+        remaining = (int)(remaining%5); //1
+
+        int pennis = remaining;
+
+        System.out.println("DOLLARS: "+dollars);
+        System.out.println("QUARTERS: "+quarters);
+        System.out.println("DIMES: "+dimes);
+        System.out.println("NICKESL: "+nickels);
+        System.out.println("PENNIS: "+pennis);
+
+        input.close();
+
+
+
+    }
+    
+    
+}

@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Activity2{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter number of students: ");
+        int N = input.nextInt();
+
+        System.out.println("Enter number of apples: ");
+        int K = input.nextInt();
+
+        int apples = K/N;
+        int remaining = K%N;
+
+        System.out.println("Input:\n"+N+"\n"+K);
+        System.out.println("Output:\n"+apples+"\n"+remaining);
+    }
+}

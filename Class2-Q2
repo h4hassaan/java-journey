@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class DemoFormat {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter initial height of plant: ");
+        int height = input.nextInt();
+
+        System.out.print("Enter number of days: ");
+        int days = input.nextInt();
+
+        int hours;
+        int n = 1;
+
+        while (n <= days) {
+            System.out.print("Enter sunlight hours for day " + n + ": ");
+            hours = input.nextInt();
+
+            if (hours > 6) {
+                height += 3;
+            } else if (hours >= 3 && hours <= 6) {
+                height += 1;
+            } else {
+                break; 
+            }
+
+            System.out.println("Height of plant for day " + n + " is: " + height);
+            n++; 
+        }
+
+        System.out.println("Final height of plant is: " + height);
+        input.close();
+    }
+}

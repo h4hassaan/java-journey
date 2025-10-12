@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class assignment3{
+    public static void main(String[]args){
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("No of cakes sold: ");
+        int cake = input.nextInt();
+        System.out.print("No of donuts sold: ");
+        int donut = input.nextInt();
+        System.out.print("No of cookies sold: ");
+        int cookie = input.nextInt();
+
+        double total_income = ((450*cake)+(120*donut)+(50*cookie));
+        double sales_tax = ((total_income *7.5)/100);
+        double final_amount = total_income + sales_tax;
+        
+        System.out.printf("Total income: $%.2f%n",total_income);
+        System.out.printf("Sales tax: $%.2f%n",sales_tax);
+        System.out.printf("Final amount: $%.2f%n",final_amount); 
+        input.close();    
+    }
+}

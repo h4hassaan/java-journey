@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class assignment{
+    public static void main(String []args){
+        Scanner input = new Scanner(System.in);
+
+        int[] org = {1,4,7,9,3};
+
+        //Original Array
+        System.out.println("Original Array: ");
+        for(int i = 0; i<org.length; i++){
+            System.out.print(org[i]+" ");
+        }
+
+        //Copying Array
+        System.out.println(" ");
+        int[] cpy = new int[org.length];
+        for (int j = 0 ; j < org.length ; j++){
+            cpy[j] = org[org.length-1-j];
+        }
+
+        //Printing Reverse Copied Array
+        System.out.println("Reverse Copied Array: ");
+        for (int i = 0 ; i < cpy.length ; i++){
+            System.out.print(cpy[i]+ " ");
+        }
+        input.close();
+    }
+}

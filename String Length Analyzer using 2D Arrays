@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+class practise{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+       
+        //Accepting array as string
+        String[][] arr = new String[3][3];
+        System.out.println("Enter the values as string: ");
+        for (int i=0 ; i < arr.length ; i++ ){
+            for(int j=0 ; j< arr[0].length ; j++){
+                arr[i][j] = input.next();
+            }
+        }
+        //Length of Strings
+        int[][] num = new int[3][3];
+        System.out.println("\n\n");
+        for (int i = 0 ; i < arr.length ; i++){
+            for (int j= 0; j<arr[0].length ; j++){
+                num[i][j] = arr[i][j].length() ; 
+
+            }
+        }
+
+        // Row with maximum words
+        int max = 0;
+        int indofrow = 0;
+        for(int i=0;i<num[0].length ; i++){
+            max+= num[0][i];
+        }
+
+        for(int i =1 ; i<num.length ; i++){
+            int sum = 0;
+            for(int j=0;j<num[0].length;j++){
+                sum+=num[i][j];
+            }
+            if (sum>max){
+                max = sum;
+                indofrow = i;
+            }
+        }
+        
+        //Result
+        
+        // Original data
+        System.out.println("Original Data:\n ");
+        for (int i=0 ; i < arr.length ; i++ ){
+            for(int j=0 ; j< arr[0].length ; j++){
+                System.out.print(arr[i][j] + "  "); 
+            }
+            System.out.print("\n");
+        }
+        
+        //Word length Array
+        System.out.println("\nWords Length Array: \n");
+        for (int i=0 ; i < num.length ; i++ ){
+            for(int j=0 ; j< num[0].length ; j++){
+                System.out.print(num[i][j] + " "); 
+            }
+            System.out.print("\n");
+        }
+        
+        System.out.println("\nRow "+indofrow+" is maximum with a sum of "+max);
+
+
+
+
+        input.close();
+    }
+}

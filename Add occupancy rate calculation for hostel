@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class practise {
+
+
+    public static double percentage(int cc,int cf){
+        return  (((double) cc/ (cc+cf))* 100);
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the number of floors: ");
+        int num = input.nextInt();
+
+        int count_f = 0;
+        int count_cc = 0;
+        for (int i = 0 ; i< num ; i++){
+            System.out.print("Enter number of rooms occupied at floor "+ i+": ");
+            int room_oc = input.nextInt();
+            System.out.print("Enter number of rooms free at floor "+i+": ");
+            int room_f = input.nextInt();
+
+            count_f+=room_f;
+            count_cc+=room_oc;
+
+        }
+
+        System.out.println("Total number of rooms: "+(count_f+count_cc));
+        System.out.println("Total number of rooms free: "+count_f);
+        System.out.println("Total number of rooms occupied: "+count_cc);
+        System.out.println("Percentage of rooms occupied: "+(percentage(count_cc,count_f)));
+        
+
+        input.close();
+    }
+}
